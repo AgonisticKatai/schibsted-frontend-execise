@@ -1,42 +1,55 @@
-import { ActionsProvider } from '../../providers/actions.provider';
+// import { ActionsProvider } from '../../providers/actions.provider';
 
-export class Accordion {
-  constructor(accordionDOM) {
-    this.accordionDOM = accordionDOM;
-    this.actions = new ActionsProvider(accordionDOM);
-  }
+// export class Accordion extends HTMLElement {
+//   // constructor(accordionDOM) {
+//     constructor() {
+//       super()
 
-  set() {
-    this.setAccordionClasses();
-    this.setEventListener();
-  }
+//     // this.accordionDOM = accordionDOM;
+//     // this.actions = new ActionsProvider(accordionDOM);
+//   }
 
-  setAccordionClasses = () => {
-    this.actions.setAccordionClasses();
-  }
+//   connectedCallback () {
+//     this.innerHTML = `
+//       <div>
+//         <button>Comprar Ahora</button>
+//       </div>
+//     `;
+//   }
 
-  setEventListener = () => {
-    const items = this.getTitleItems();
-    this.addListenerAll(items, 'click');
-  }
+//   // set() {
+//   //   this.setAccordionClasses();
+//   //   this.setEventListener();
+//   // }
 
-  getTitleItems = () => {
-    const { actions: { titleItems }} = this;
-    return titleItems;
-  }
+//   // setAccordionClasses = () => {
+//   //   this.actions.setAccordionClasses();
+//   // }
 
-  addListenerAll = (domElems, event) => {
-    domElems = [ ...domElems ];
-    domElems.map(domElem => this.addListener(domElem, event))
-  }
+//   // setEventListener = () => {
+//   //   const items = this.getTitleItems();
+//   //   this.addListenerAll(items, 'click');
+//   // }
 
-  addListener = (domElem, event) => {
-    domElem.addEventListener(event, this.handleClick)
-  }
+//   // getTitleItems = () => {
+//   //   const { actions: { titleItems }} = this;
+//   //   return titleItems;
+//   // }
 
-  handleClick = event => {
-    const { currentTarget } = event;
-    this.actions.activeItem(currentTarget);
-  }
+//   // addListenerAll = (domElems, event) => {
+//   //   domElems = [ ...domElems ];
+//   //   domElems.map(domElem => this.addListener(domElem, event))
+//   // }
 
-}
+//   // addListener = (domElem, event) => {
+//   //   domElem.addEventListener(event, this.handleClick)
+//   // }
+
+//   // handleClick = event => {
+//   //   const { currentTarget } = event;
+//   //   this.actions.activeItem(currentTarget);
+//   // }
+
+// }
+
+// window.customElement.define('app-accordion', Accordion);

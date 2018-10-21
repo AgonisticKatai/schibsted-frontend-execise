@@ -2,6 +2,7 @@ import { GET_QUERY, GET_QUERY_ALL, ADD_CLASS, REMOVE_CLASS, ADD_CLASS_ALL } from
 
 export class ActionsProvider {
   constructor(accordionDOM) {
+    super()
     this.accordionDOM = accordionDOM
     this.titleItems = null;
   }
