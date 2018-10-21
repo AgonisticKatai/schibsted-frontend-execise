@@ -1,6 +1,6 @@
-import { GET_QUERY, GET_QUERY_ALL, ADD_CLASS, REMOVE_CLASS, ADD_CLASS_ALL } from '../../providers/document.provider';
+import { GET_QUERY, GET_QUERY_ALL, ADD_CLASS, REMOVE_CLASS, ADD_CLASS_ALL } from './document.provider';
 
-export class Actions {
+export class ActionsProvider {
   constructor(accordionDOM) {
     this.accordionDOM = accordionDOM
     this.titleItems = null;

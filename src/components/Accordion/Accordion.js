@@ -1,9 +1,9 @@
-import { Actions } from '../../components/Actions/Actions';
+import { ActionsProvider } from '../../providers/actions.provider';
 
 export class Accordion {
   constructor(accordionDOM) {
     this.accordionDOM = accordionDOM;
-    this.actions = new Actions(accordionDOM);
+    this.actions = new ActionsProvider(accordionDOM);
   }
 
   set() {
@@ -15,13 +15,14 @@ export class Accordion {
     this.actions.setAccordionClasses();
   }
 
-  getTitleItems = () => {
-    return this.actions.titleItems;
-  }
-
   setEventListener = () => {
     const items = this.getTitleItems();
     this.addListenerAll(items, 'click');
+  }
+
+  getTitleItems = () => {
+    const { actions: { titleItems }} = this;
+    return titleItems;
   }
 
   addListenerAll = (domElems, event) => {
