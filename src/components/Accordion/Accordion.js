@@ -24,7 +24,7 @@ export class Accordion extends HTMLElement {
   get accordionTemplate() {
     const { data } = this.state;
     return `
-      <dl>
+      <dl class="accordion">
         ${data.map(({id, title, content}) =>
         `<custom-section
           id='${id}'

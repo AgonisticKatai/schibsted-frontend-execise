@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+body, html {
+  font-family: 'Quicksand', sans-serif;
+  height: 100%; }
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+custom-accordion__item__body {
+  overflow: auto;
+  margin: 2px 0 10px;
+  border: none;
+  padding: 0 20px;
+  max-height: 0;
+  transition: max-height 0.3s ease-in;
+  transition: padding 0.2s ease-in; }
+
+custom-accordion__item__title, custom-accordion__item__body--active + custom-accordion__item__body {
+  max-height: 250px;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 20px; }
+

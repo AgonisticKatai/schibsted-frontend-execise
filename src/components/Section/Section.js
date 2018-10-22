@@ -45,9 +45,9 @@ export class Section extends HTMLElement {
   get sectionTemplate() {
     const { title, content } = this.state;
     return `
-      <dt>${title}</dt>
-      <dd>
-        <p>${content}</p>
+      <dt class="accordion__section__title">${title}</dt>
+      <dd class="accordion__section__body">
+        <p class="accordion__section__text">${content}</p>
       </dd>
     `;
   }
