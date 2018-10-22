@@ -24,10 +24,10 @@ export class Section extends HTMLElement {
 
   _handleListener = element => {
     const title = element.querySelector('dt');
-    title.addEventListener('click', ()=> this.activateElement());
+    title.addEventListener('click', ()=> this.activateElement(element));
   }
 
-  activateElement() {
+  activateElement(element) {
     return element.hasAttribute('class', 'active') ? element.removeAttribute('class', 'active') : this.setActiveElement(this);
   }
 
