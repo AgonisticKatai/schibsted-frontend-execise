@@ -14,6 +14,9 @@ custom-section {
       max-height: 250px;
       padding: 20px;
       animation: fadeInOpacity 2s ease-in 1;
+      @media screen and (max-width: $screen-md) {
+        margin: 0;
+      }
     }
   }
 }

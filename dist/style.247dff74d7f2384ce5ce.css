@@ -22,6 +22,11 @@ body, html {
   opacity: 1;
   -webkit-animation: fadeInOpacity 2s ease-in 1;
           animation: fadeInOpacity 2s ease-in 1; }
+  @media screen and (max-width: 900px) {
+    .container {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center; } }
 
 custom-accordion {
   opacity: 1;
@@ -47,4 +52,7 @@ custom-section {
     padding: 20px;
     -webkit-animation: fadeInOpacity 2s ease-in 1;
             animation: fadeInOpacity 2s ease-in 1; }
+    @media screen and (max-width: 900px) {
+      custom-section.active .accordion__section__body {
+        margin: 0; } }
 

@@ -22,6 +22,11 @@ body, html {
   opacity: 1;
   -webkit-animation: fadeInOpacity 2s ease-in 1;
           animation: fadeInOpacity 2s ease-in 1; }
+  @media screen and (min-width: 992px) {
+    .container {
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: center; } }
 
 custom-accordion {
   opacity: 1;
@@ -40,11 +45,14 @@ custom-section {
     overflow: auto;
     max-height: 0;
     padding: 0 20px;
-    transition: max-height 0.3s ease-in;
-    transition: padding 0.2s ease-in;
-    -webkit-animation: fadeInOpacity 2s ease-in 1;
-            animation: fadeInOpacity 2s ease-in 1; }
+    transition: max-height 0.5s ease-in;
+    transition: padding 0.4s ease-in; }
   custom-section.active .accordion__section__body {
     max-height: 250px;
-    padding: 20px; }
+    padding: 20px;
+    -webkit-animation: fadeInOpacity 2s ease-in 1;
+            animation: fadeInOpacity 2s ease-in 1; }
+    @media screen and (max-width: 992px) {
+      custom-section.active .accordion__section__body {
+        margin: 0; } }
 
