@@ -3,7 +3,6 @@ import { PROJECT_TITLE } from '../../texts/texts';
 export class Header extends HTMLElement {
     constructor() {
       super()
-
       this.state = {
         PROJECT_TITLE
       }

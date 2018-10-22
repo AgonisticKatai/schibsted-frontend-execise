@@ -1,1 +1,1 @@
-export const URL = 'data.json';
+export const API_URL = '../../data.json';

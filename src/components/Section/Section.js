@@ -1,10 +1,9 @@
 export class Section extends HTMLElement {
   constructor() {
     super()
-
     this.state = {
       title: '',
-      content: '',
+      content: ''
     }
   }
 
@@ -18,11 +17,30 @@ export class Section extends HTMLElement {
 
   connectedCallback() {
     this._sectionTemplate();
+    this._handleListener(this);
   }
 
-  _sectionTemplate = () => {
-    this.innerHTML = this.sectionTemplate;
-  };
+  _sectionTemplate = () => this.innerHTML = this.sectionTemplate;
+
+  _handleListener = element => {
+    const title = element.querySelector('dt');
+    title.addEventListener('click', ()=> this.activateElement());
+  }
+
+  activateElement() {
+    return element.hasAttribute('class', 'active') ? element.removeAttribute('class', 'active') : this.setActiveElement(this);
+  }
+
+  setActiveElement(element) {
+    this.removeAllActiveElements();
+    element.setAttribute('class', 'active');
+  }
+
+  removeAllActiveElements() {
+    let activeElements = document.getElementsByClassName('active');
+    activeElements = [...activeElements];
+    activeElements.length && activeElements.map(element => element.removeAttribute('class', 'active'));
+  }
 
   get sectionTemplate() {
     const { title, content } = this.state;
@@ -33,7 +51,6 @@ export class Section extends HTMLElement {
       </dd>
     `;
   }
-
 }
 
 window.customElements.define('custom-section', Section);
