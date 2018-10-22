@@ -1,42 +1,39 @@
-import { ActionsProvider } from '../../providers/actions.provider';
-
-export class Accordion {
-  constructor(accordionDOM) {
-    this.accordionDOM = accordionDOM;
-    this.actions = new ActionsProvider(accordionDOM);
+import { getData } from '../../services/api';
+export class Accordion extends HTMLElement {
+  constructor() {
+    super()
+    this.state = {
+      data: ''
+    }
   }
 
-  set() {
-    this.setAccordionClasses();
-    this.setEventListener();
+  connectedCallback() {
+    this._getData()
   }
 
-  setAccordionClasses = () => {
-    this.actions.setAccordionClasses();
+  _getData = async() => {
+    const response = await getData();
+    this.state.data = response;
+    response && this._accordionTemplate();
   }
 
-  setEventListener = () => {
-    const items = this.getTitleItems();
-    this.addListenerAll(items, 'click');
-  }
+  _accordionTemplate = () => {
+    this.innerHTML = this.accordionTemplate;
+  };
 
-  getTitleItems = () => {
-    const { actions: { titleItems }} = this;
-    return titleItems;
+  get accordionTemplate() {
+    const { data } = this.state;
+    return `
+      <dl class="accordion">
+        ${data.map(({id, title, content}) =>
+        `<custom-section
+          id='${id}'
+          title='${title}'
+          content='${content}'>
+        </custom-section>`).join(' ')}
+      </dl>
+    `
   }
-
-  addListenerAll = (domElems, event) => {
-    domElems = [ ...domElems ];
-    domElems.map(domElem => this.addListener(domElem, event))
-  }
-
-  addListener = (domElem, event) => {
-    domElem.addEventListener(event, this.handleClick)
-  }
-
-  handleClick = event => {
-    const { currentTarget } = event;
-    this.actions.activeItem(currentTarget);
-  }
-
 }
+
+window.customElements.define('custom-accordion', Accordion);

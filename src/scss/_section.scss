@@ -1,0 +1,22 @@
+custom-section {
+  padding: 5%;
+  & .accordion__section__body {
+    overflow: auto;
+    max-height: 0;
+    padding: 0 20px;
+    transition: max-height 0.5s ease-in;
+    transition: padding 0.4s ease-in;
+
+  }
+
+  &.active {
+    & .accordion__section__body {
+      max-height: 250px;
+      padding: 20px;
+      animation: fadeInOpacity 2s ease-in 1;
+      @media screen and (max-width: $screen-md) {
+        margin: 0;
+      }
+    }
+  }
+}
