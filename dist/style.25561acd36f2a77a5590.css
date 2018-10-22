@@ -9,13 +9,18 @@ body, html {
   justify-content: space-evenly;
   align-items: center; }
 
+custom-accordion {
+  transition: max-height 0.3s ease-in; }
+
 custom-section {
   padding: 5%; }
   custom-section .accordion__section__body {
     overflow: auto;
     max-height: 0;
+    padding: 0 20px;
     transition: max-height 0.3s ease-in;
     transition: padding 0.2s ease-in; }
   custom-section.active .accordion__section__body {
-    max-height: 250px; }
+    max-height: 250px;
+    padding: 20px; }
 
