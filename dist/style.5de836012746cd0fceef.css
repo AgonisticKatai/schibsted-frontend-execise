@@ -1,4 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body, html {
   font-family: 'Quicksand', sans-serif;
   height: 100%; }
@@ -7,24 +18,15 @@ body, html {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  opacity: 1;
+  -webkit-animation: fadeInOpacity 2s ease-in 1;
+          animation: fadeInOpacity 2s ease-in 1; }
 
 custom-accordion {
   opacity: 1;
-  -webkit-animation-name: fadeInOpacity;
-          animation-name: fadeInOpacity;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s; }
-
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+  -webkit-animation: fadeInOpacity 2s ease-in 1;
+          animation: fadeInOpacity 2s ease-in 1; }
 
 @keyframes fadeInOpacity {
   0% {
@@ -39,7 +41,9 @@ custom-section {
     max-height: 0;
     padding: 0 20px;
     transition: max-height 0.3s ease-in;
-    transition: padding 0.2s ease-in; }
+    transition: padding 0.2s ease-in;
+    -webkit-animation: fadeInOpacity 2s ease-in 1;
+            animation: fadeInOpacity 2s ease-in 1; }
   custom-section.active .accordion__section__body {
     max-height: 250px;
     padding: 20px; }
