@@ -21,7 +21,7 @@ or
 ```
 [ npm start ] or [ yarn start ]
 ```
-[link](https://github.com/AgonisticKatai/shibsted-frontend-execise/tree/master/dist)
+[link](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
 ## Description
