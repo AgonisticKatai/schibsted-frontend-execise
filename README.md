@@ -19,7 +19,7 @@ or
 
 ## Launch
 ```
-[ npm start ] or [ yarn start ] [link](https://github.com/AgonisticKatai/shibsted-frontend-execise/tree/master/dist)
+[ npm start ] or [ yarn start ] [https://github.com/AgonisticKatai/shibsted-frontend-execise/tree/master/dist](link)
 ```
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
