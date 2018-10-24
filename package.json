@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "jest"
   },
   "devDependencies": {
     "@webcomponents/custom-elements": "^1.2.1",
@@ -31,5 +32,8 @@
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9",
     "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "jest": "^23.6.0"
   }
 }
