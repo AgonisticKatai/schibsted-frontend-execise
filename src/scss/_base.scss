@@ -10,6 +10,7 @@ body, html {
   align-items: center;
   opacity: 1;
   animation: fadeInOpacity 2s ease-in 1;
+  cursor: default;
   @media screen and (max-width: $screen-md) {
     justify-content: flex-start;
     flex-direction: column;

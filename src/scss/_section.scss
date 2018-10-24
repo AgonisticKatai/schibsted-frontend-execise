@@ -1,5 +1,8 @@
 custom-section {
   padding: 5%;
+  & .accordion__section__title {
+    cursor: pointer;
+  }
   & .accordion__section__body {
     overflow: auto;
     max-height: 0;

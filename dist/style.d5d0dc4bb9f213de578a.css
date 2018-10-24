@@ -21,7 +21,8 @@ body, html {
   align-items: center;
   opacity: 1;
   -webkit-animation: fadeInOpacity 2s ease-in 1;
-          animation: fadeInOpacity 2s ease-in 1; }
+          animation: fadeInOpacity 2s ease-in 1;
+  cursor: default; }
   @media screen and (max-width: 992px) {
     .container {
       justify-content: flex-start;
@@ -35,6 +36,8 @@ custom-accordion {
 
 custom-section {
   padding: 5%; }
+  custom-section .accordion__section__title {
+    cursor: pointer; }
   custom-section .accordion__section__body {
     overflow: auto;
     max-height: 0;
