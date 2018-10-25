@@ -1,6 +1,6 @@
-# Shibsted Frontend Exercise ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+# Schibsted Frontend Exercise ![CI status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
-Technical exercise of the company Shibsted Spain, which proposes the creation of an accordion using Vanilla Javascript, Sass, ES6 and as an extra bonus, calls to an external API to generate the different sections of the accordion.
+Technical exercise of the company Schibsted Spain, which proposes the creation of an accordion using Vanilla Javascript, Sass, ES6 and as an extra bonus, calls to an external API to generate the different sections of the accordion.
 
 It is not allowed to use any Javascript framework.
 
@@ -21,7 +21,7 @@ or
 ```
 [ npm start ] or [ yarn start ]
 ```
-[Visualiza el proyecto pulsando aquí...](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
+[View this project online!](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
 ## Description

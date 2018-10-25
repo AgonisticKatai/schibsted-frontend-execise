@@ -1,4 +1,5 @@
 import { getData } from '../../services/api';
+
 export class Accordion extends HTMLElement {
   constructor() {
     super()
@@ -35,5 +36,3 @@ export class Accordion extends HTMLElement {
     `
   }
 }
-
-window.customElements.define('custom-accordion', Accordion);

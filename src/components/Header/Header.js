@@ -25,7 +25,4 @@ export class Header extends HTMLElement {
       </div>
     `;
   }
-
 }
-
-window.customElements.define('custom-header', Header);

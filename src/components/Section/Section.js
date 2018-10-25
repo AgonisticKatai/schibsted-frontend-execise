@@ -52,5 +52,3 @@ export class Section extends HTMLElement {
     `;
   }
 }
-
-window.customElements.define('custom-section', Section);
