@@ -24,7 +24,7 @@ or
 [View this project online!](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
-### Run demo
+### Run tests
 * `npm run test`
 or
 * `yarn test`
