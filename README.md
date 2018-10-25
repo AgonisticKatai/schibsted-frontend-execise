@@ -21,7 +21,7 @@ or
 ```
 [ npm start ] or [ yarn start ]
 ```
-[View this project online!](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
+[View this project online!](https://AgonisticKatai.github.io/schibsted-frontend-execise/dist/)
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
 ### Run tests
