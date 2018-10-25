@@ -24,6 +24,12 @@ or
 [View this project online!](https://AgonisticKatai.github.io/shibsted-frontend-execise/dist/)
 ##### Local server is launched at [http://localhost:8080](http://localhost:8080)
 
+### Run demo
+* `npm run test`
+or
+* `yarn test`
+
+
 ## Description
 With the next markup, you must create an accordion (JS / CSS) show only the contents of a section at a time. Sure to follow the SUIT convention when working with CSS.
 ```
